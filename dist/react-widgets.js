@@ -8251,10 +8251,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var props = _objectWithoutProperties(_$omitOwnProps, ['className', 'onKeyPress', 'onKeyUp']);
 
 	    var val = this.constrainValue(this.props.value);
-	    console.log('prop in number picker', this.props);
+	    var cleanedProps = _extends({}, props);
+	    delete cleanedProps.errors;
+	    delete cleanedProps.invalid;
+
 	    return _react2.default.createElement(
 	      'div',
-	      _extends({}, props, {
+	      _extends({}, cleanedProps, {
 	        ref: 'element',
 	        onKeyDown: this._keyDown,
 	        onFocus: this.handleFocus,

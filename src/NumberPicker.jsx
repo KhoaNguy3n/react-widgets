@@ -94,10 +94,13 @@ let NumberPicker = React.createClass({
     let { className, onKeyPress, onKeyUp, ...props } = _.omitOwnProps(this);
 
     let val = this.constrainValue(this.props.value);
-    console.log('prop in number picker', this.props);
+    let cleanedProps = { ...props };
+    delete cleanedProps.errors;
+    delete cleanedProps.invalid;
+
     return (
       <div
-        {...props }
+        {...cleanedProps }
         ref="element"
         onKeyDown={this._keyDown}
         onFocus={this.handleFocus}
