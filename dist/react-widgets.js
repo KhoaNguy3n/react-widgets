@@ -1788,10 +1788,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    var isRtl = !!this.context.isRtl;
 	    var openClass = 'rw-open' + (dropUp ? '-up' : '');
+	    var rest = _extends({}, props);
+	    delete rest.invalid;
+	    delete rest.errors;
 
 	    tabIndex = tabIndex != null ? tabIndex : '-1';
 
-	    return _react2.default.createElement('div', _extends({}, props, {
+	    return _react2.default.createElement('div', _extends({}, rest, {
 	      tabIndex: tabIndex,
 	      className: (0, _classnames2.default)(className, 'rw-widget', isRtl && 'rw-rtl', open && openClass, focused && 'rw-state-focus', disabled && 'rw-state-disabled', readOnly && 'rw-state-readonly')
 	    }));

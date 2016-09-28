@@ -22,12 +22,15 @@ class Widget extends React.Component {
 
     let isRtl = !!this.context.isRtl;
     let openClass = `rw-open${dropUp ? '-up' : ''}`
+    let rest = { ...props };
+    delete rest.invalid;
+    delete rest.errors;
 
     tabIndex = tabIndex != null ? tabIndex : '-1'
 
     return (
       <div
-        {...props}
+        {...rest}
         tabIndex={tabIndex}
         className={cn(
           className,
