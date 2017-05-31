@@ -69,8 +69,7 @@ export default React.createClass({
         {...props}
         type='text'
         className='rw-input'
-        onInput={this._change}
-        onChange={() => {}}
+        onChange={this._change}
         onBlur={this._finish}
         aria-disabled={this.props.disabled}
         aria-readonly={this.props.readOnly}

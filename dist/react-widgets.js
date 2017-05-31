@@ -8517,8 +8517,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2.default.createElement('input', _extends({}, props, {
 	      type: 'text',
 	      className: 'rw-input',
-	      onInput: this._change,
-	      onChange: function onChange() {},
+	      onChange: this._change,
 	      onBlur: this._finish,
 	      'aria-disabled': this.props.disabled,
 	      'aria-readonly': this.props.readOnly,
