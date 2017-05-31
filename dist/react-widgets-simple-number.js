@@ -1,4 +1,4 @@
-/*! (c) 2016 Jason Quense | https://github.com/jquense/react-widgets/blob/master/License.txt */
+/*! (c) 2017 Jason Quense | https://github.com/jquense/react-widgets/blob/master/License.txt */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -43,7 +43,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var module = __webpack_require__(1);
@@ -56,9 +56,9 @@
 
 
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -88,11 +88,9 @@
 	};
 
 	function simpleNumber(options) {
-	  var _defaults$options = _extends({}, defaults, options);
-
-	  var decimal = _defaults$options.decimal;
-	  var grouping = _defaults$options.grouping;
-
+	  var _defaults$options = _extends({}, defaults, options),
+	      decimal = _defaults$options.decimal,
+	      grouping = _defaults$options.grouping;
 
 	  var localizer = {
 	    formats: {
@@ -140,15 +138,15 @@
 	}
 	module.exports = exports['default'];
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = window.ReactWidgets;
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -188,9 +186,9 @@
 
 	};
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	'use strict';
 
@@ -393,9 +391,9 @@
 	  return deconstructedFormat;
 	};
 
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	
 	module.exports = formatter;
@@ -654,5 +652,5 @@
 	}
 
 
-/***/ }
+/***/ })
 /******/ ]);
